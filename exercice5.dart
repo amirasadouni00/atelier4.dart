@@ -30,11 +30,13 @@ class Rectangle extends Forme {
 }
 
 void main() {
-  var cercle = Cercle(5.0);
-  cercle.afficherMessage();
-  print("Aire du cercle : ${cercle.calculerAire()}");
+  List<Forme> formes = [];
 
-  var rectangle = Rectangle(4.0, 6.0);
-  rectangle.afficherMessage();
-  print("Aire du rectangle : ${rectangle.calculerAire()}");
+  formes.add(Cercle(5.0));
+  formes.add(Rectangle(4.0, 6.0));
+
+  for (var forme in formes) {
+    forme.afficherMessage();
+    print("Aire : ${forme.calculerAire()}");
+  }
 }
