@@ -15,9 +15,25 @@ class ServeurAPI implements Connectable {
   }
 }
 
+class BaseDeDonnees implements Connectable {
+  @override
+  void connecter(String utilisateur) {
+    print("BaseDeDonnees : Connexion ouverte pour $utilisateur.");
+  }
+
+  @override
+  void deconnecter() {
+    print("BaseDeDonnees : Déconnexion effectuée.");
+  }
+}
+
 void main() {
   ServeurAPI serveur = ServeurAPI();
+  BaseDeDonnees bdd = BaseDeDonnees();
 
   serveur.connecter("Amira");
   serveur.deconnecter();
+
+  bdd.connecter("Amira");
+  bdd.deconnecter();
 }
