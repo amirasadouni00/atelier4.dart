@@ -8,6 +8,6 @@ class Compte {
 }
 
 void main() {
-  var compte = Compte("C001");
-  print("Compte créé : ${compte.numeroCompte}");
+  var c = Compte("A100", 20.0);
+  print("Compte créé : ${c.numeroCompte}");
 }
