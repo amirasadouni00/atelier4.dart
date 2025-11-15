@@ -31,9 +31,10 @@ void main() {
   ServeurAPI serveur = ServeurAPI();
   BaseDeDonnees bdd = BaseDeDonnees();
 
-  serveur.connecter("Amira");
-  serveur.deconnecter();
+  List<Connectable> services = [serveur, bdd];
 
-  bdd.connecter("Amira");
-  bdd.deconnecter();
+  for (var service in services) {
+    service.connecter("Amira");
+    service.deconnecter();
+  }
 }
