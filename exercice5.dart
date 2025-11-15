@@ -17,8 +17,24 @@ class Cercle extends Forme {
   }
 }
 
+class Rectangle extends Forme {
+  final double longueur;
+  final double largeur;
+
+  Rectangle(this.longueur, this.largeur);
+
+  @override
+  double calculerAire() {
+    return longueur * largeur;
+  }
+}
+
 void main() {
   var cercle = Cercle(5.0);
   cercle.afficherMessage();
   print("Aire du cercle : ${cercle.calculerAire()}");
+
+  var rectangle = Rectangle(4.0, 6.0);
+  rectangle.afficherMessage();
+  print("Aire du rectangle : ${rectangle.calculerAire()}");
 }
