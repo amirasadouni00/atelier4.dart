@@ -1,5 +1,3 @@
-// exercice4.dart
-
 class Media {
   final String titre;
 
@@ -10,8 +8,18 @@ class Media {
   }
 }
 
+class Livre extends Media {
+  final String auteur;
+
+  Livre(String titre, this.auteur) : super(titre);
+
+  @override
+  void afficherType() {
+    print("Ceci est un Livre : $titre par $auteur.");
+  }
+}
+
 void main() {
-  // test minimal pour exécuter le fichier
-  var media = Media("Média test");
-  media.afficherType();
+  var livre = Livre("1984", "George Orwell");
+  livre.afficherType();
 }
