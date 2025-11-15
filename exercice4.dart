@@ -19,7 +19,26 @@ class Livre extends Media {
   }
 }
 
+class Film extends Media {
+  final int dureeMinutes;
+
+  Film(String titre, this.dureeMinutes) : super(titre);
+
+  @override
+  void afficherType() {
+    print("Ceci est un Film : $titre, durée $dureeMinutes minutes.");
+  }
+}
+
 void main() {
-  var livre = Livre("1984", "George Orwell");
-  livre.afficherType();
+  List<Media> catalogue = [];
+
+  catalogue.add(Livre("1984", "George Orwell"));
+  catalogue.add(Livre("Le Petit Prince", "Antoine de Saint-Exupéry"));
+  catalogue.add(Film("Inception", 148));
+  catalogue.add(Film("Le Roi Lion", 88));
+
+  for (var media in catalogue) {
+    media.afficherType();
+  }
 }
