@@ -12,8 +12,5 @@ void main() {
   Tache t2 = Tache("Répondre aux emails");
   Tache t3 = Tache("Préparer le rapport");
 
-  print(
-    "Tâches créées : ${t1.description}, ${t2.description}, ${t3.description}",
-  );
-  print("Nombre total de tâches : ${Tache.nombreTotal}");
+  print("Nombre total de tâches créées : ${Tache.nombreTotal}");
 }
