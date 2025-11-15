@@ -36,7 +36,10 @@ void main() {
   l2.afficherInfos();
 
   Roman r1 = Roman("Sherlock Holmes", "Arthur Conan Doyle", "Policier");
+  Roman r2 = Roman("Le Comte de Monte-Cristo", "Alexandre Dumas", "Aventure");
+
   r1.afficherInfosRoman();
+  r2.afficherInfosRoman();
 
   Livre.afficherTotalLivres();
 }
