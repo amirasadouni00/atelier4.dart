@@ -10,19 +10,16 @@ class Couleur {
   Couleur.bleu() : r = 0, g = 0, b = 255;
 
   void afficherCouleur() {
-    print("(R:$r, V:$g, B:$b)");
+    print('(R: $r, V: $g, B: $b)');
   }
 }
 
 void main() {
-  var rouge = Couleur.rouge();
-  var vert = Couleur.vert();
-  var bleu = Couleur.bleu();
+  Couleur rouge = Couleur.rouge();
+  Couleur vert = Couleur.vert();
+  Couleur bleu = Couleur.bleu();
 
   rouge.afficherCouleur();
   vert.afficherCouleur();
   bleu.afficherCouleur();
-
-  var maCouleur = Couleur(128, 64, 255);
-  maCouleur.afficherCouleur();
 }
